@@ -1,0 +1,30 @@
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  transform-style: preserve-3d;
+}
+.card .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 2s ease-in-out;
+}
+.card .face.front {
+  background-image: url(../images/1.jfif);
+  background-position: top;
+}
+.card:hover .face.front {
+  transform: perspective(500px) rotateY(180deg);
+}
+.card .face.back {
+  background-image: url(../images/2.jfif);
+  background-position: top;
+  transform: perspective(500px) rotateY(180deg);
+}
+.card:hover .face.back {
+  transform: perspective(500px) rotateY(360deg);
+}
