@@ -1,8 +1,15 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
 .card {
   position: relative;
   width: 300px;
   height: 400px;
   transform-style: preserve-3d;
+  margin-right: 15px;
+  margin-bottom: 30px;
 }
 .card .face {
   position: absolute;
@@ -12,6 +19,7 @@
   height: 100%;
   transform-style: preserve-3d;
   transition: 2s ease-in-out;
+  transform: perspective(500px) rotateY(0);
 }
 .card .face.front {
   background-image: url(../images/1.jfif);
